@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(3, 51, 94);
+    font-family: 'Koulen', cursive;
+}
+.container{
+    display: grid;
+    grid-template: 1fr 5fr 1fr/ 1fr 1fr;
+    grid-template-areas:
+    "item-header item-header"
+    "item-main item-main"
+    "item-footer item-footer";
+
+}
+
+.gridcontainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.item-header{
+    background-color: #63d471;
+    background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+    width: 100%;    
+    clear: both;
+    content: '';
+    display: table;
+    grid-area: item-header;
+}
+h1{
+    font-size: 100px;
+    text-align: center;
+}
+
+.menu{
+    width: 900px;
+    margin: 0 auto;
+}
+img{
+    width: 120px;
+    height: 50px;
+    float: left;
+    padding: 8px;
+}
+
+nav{
+    float: right;
+}
+nav ul li{
+    list-style: none;
+    margin-left: 75px;
+    padding: 25px;
+    float: left;
+}
+.item-main{
+    display: grid;
+    flex-direction: column;
+    grid-area: item-main;
+}
+.seccion1{
+    margin: auto;
+}
+h2{
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+    margin-left: 50px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.destacado{
+    width: 20rem;
+    height: auto;
+    transform: skew(20deg);
+    border-radius: 50%;
+   
+}
+
+.campeonas{
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+.seccion2{
+    margin: auto;
+}
+table{
+    margin-top: 50px;
+    caption-side: bottom;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+th{
+    background-color: black;
+    color: white;
+}
+td, th{
+    border: 2px solid black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.form-register{
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    margin-left: 100px;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+.form-register h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.controls{
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid rgb(47, 47, 173);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+.form-register p{
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+}
+.form-register a{
+    color: white;
+    text-decoration: none;
+}
+.form-register a:hover{
+    color: white;
+    text-decoration: underline;
+}
+.form-register .boton{
+    width: 100%;
+    background: blue;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px;
+    font-size: 16px;
+}
+.semas{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    float: right;
+}
+.semas figure{
+    position: relative;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0,50);
+}
+.semas figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+.semas figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    height: 100%;
+    background: rgba(11,103,123,0.6);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+.semas figure:hover> .capa{
+    opacity: 1;
+    visibility: visible;
+}
+.redes{
+    text-align: center;
+}
+.item-footer{
+    display: grid;
+    grid-area: item-footer;
+    background-color: gray;
+}
+.item-footer h4{
+    display: grid;
+    font-family: 'Water Brush' cursive;
+    text-align: center;
+    color: green;
+    font-size: 80px;
+}
+@media screen and (max-width: 768px){
+    body{
+        background: blueviolet;
+    }
+    h2{
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+    }
+    .item-footer h4{
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
